@@ -24,9 +24,9 @@ To use this program, follow these steps:
 # Input File Format
     The input file should contain log data in the following format:
             <timestamp> <username> <action>
-      *<timestamp>: The time at which the session starts or ends, in the format HH:MM:SS.
-      <username>: A single alphanumeric string representing the user's name.
-      <action>: Either "Start" or "End" indicating the start or end of a session.
+      * <timestamp>: The time at which the session starts or ends, in the format HH:MM:SS.
+      * <username>: A single alphanumeric string representing the user's name.
+      * <action>: Either "Start" or "End" indicating the start or end of a session.
 Example :
 
     14:02:03 ALICE99 Start
@@ -55,7 +55,6 @@ Example:
 # Assumptions
 
     The log file contains valid timestamps, usernames, and action markers.
-    Sessions do not span midnight.
     Missing start or end markers are handled as described in the program description.
 
 # Error Handling
@@ -64,7 +63,7 @@ Example:
     Other exceptions will also be caught and reported with appropriate error messages.
 # Testing
     The program includes unit tests to ensure its correctness. These tests can be run using the following command:
-        python -m test_fail_billing.py
+        python test_fail_billing.py
     The tests cover various aspects of the program, including:
             * Extracting start and end times for each user.
             * Generating session data for each user.
