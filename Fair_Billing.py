@@ -132,13 +132,11 @@ def main():
     """
     Main function to run the program.
     """
-    if len(sys.argv) < 3:
-        print("Usage: python program_name.py input_file.txt argument1 argument2")
+    if len(sys.argv) != 2:
+        print("Usage: python program_name.py input_file.txt")
         return
 
     input_file = sys.argv[1]
-    additional_args = sys.argv[2:]  # Collect additional arguments
-
     sessions = parse_log_file(input_file)
     if not sessions:
         print("No valid session data found.")
@@ -147,9 +145,6 @@ def main():
     user_sessions = calculate_session_duration(sessions)
     for username, (session_count, total_duration) in user_sessions.items():
         print(f"{username} {session_count} {total_duration}")
-
-    # Use additional arguments here
-    print("Additional arguments:", additional_args)
 
 
 if __name__ == "__main__":
