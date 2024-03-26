@@ -18,8 +18,8 @@ To use this program, follow these steps:
     3. Navigate to the directory containing the program files.
 
     4. Run the program with the following command:
-            python fair_billing.py <input_file.txt> foo bar
-      Replace <input_file.txt> with the path to your input log file and along with dditional arguments
+            python fair_billing.py <input_file.txt>
+      Replace <input_file.txt> with the path to your input log file
     5. The program will then process the log file and output the results, showing each user's name, number of sessions, and total duration in seconds.
 # Input File Format
     The input file should contain log data in the following format:
